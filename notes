@@ -1,0 +1,15 @@
+def proc_test
+	whatz = Proc.new { return "Exiting"}
+	whatz.call
+	puts "did it get here?"
+end
+
+def lambda_test
+	whatz = -> { return puts "Here we are in the lambda" }
+	whatz.call
+	puts "now did we get out of the lambda?"
+end
+
+lambda_test
+
+proc_test
