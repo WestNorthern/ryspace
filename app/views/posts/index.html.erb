@@ -1,0 +1,40 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<style>
+	#bg {
+				background-image: url('assets/images/bg.jpg');
+				background-attachment: fixed;
+				background-size: cover;
+				background-repeat: no-repeat;
+				height: 768px;
+			}
+</style>
+
+<div id="bg">
+	<ul id="scene">
+		<li class="layer" data-depth="0.80">
+			<%= image_tag("grim.png") %>
+		</li>
+		<li class="layer" data-depth="0.30">
+			<img src="images/dio-skull.png" alt="">
+			<%= image_tag("dio-skull.png") %>
+		</li>
+		<li class="layer" data-depth="0.40">
+			<img src="images/candles-1.png" alt="">
+			<%= image_tag("candles-1.png") %>
+		</li>
+		<li class="layer" data-depth="0.00">
+			<img src="images/ryandecho.png" alt="">
+			<%= image_tag("ryandecho.png") %>
+		</li>
+	</ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
+<script>
+
+// Pretty simple huh?
+var scene = document.getElementById('scene');
+var parallax = new Parallax(scene);
+
+</script>

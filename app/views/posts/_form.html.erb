@@ -1,0 +1,22 @@
+
+			<% if @post.user %>
+				<div class="card-title" style="text-align: center;">
+					<%= best_in_place_if @post.user.id == current_user.id, @post, :title, :type => :input %>
+				</div>
+				<div class="card-content">
+					<%= best_in_place_if @post.user.id == current_user.id, @post, :content, :display_with => proc { |v| markdown(v)}, :type => :textarea %>
+				</div>
+			<% else %>
+				<%= form_with  model: @post do |f| %>
+					<div class="new_post_content">
+						<div class="card-title">
+							<%= f.text_field :title, placeholder: 'Title' %>
+						</div>
+					</div>
+					<div class="card-content">
+						<%= f.text_area :content, placeholder: 'Content', style: 'height: 500px;' %>
+						<%= f.text_field :tag_list, value: f.object.tag_list.to_s, placeholder: 'Tags' %>
+						<%= f.submit class: "post_submit waves-effect waves-light btn" %>
+					</div>
+				<% end %>
+			<% end %>

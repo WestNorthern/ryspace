@@ -60,3 +60,9 @@ gem 'devise'
 
 # CSS framework
 gem 'foundation-rails'
+
+# Parallax JS
+gem 'parallax-rails'
+
+# Trying to fix my JQuery
+gem 'jquery-rails'

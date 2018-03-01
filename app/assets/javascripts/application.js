@@ -12,7 +12,18 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery3
+//= require jquery
+//= require parallax
+//= require jquery.parallax
 //= require foundation
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+// $(function(){ $(document).foundation(); });
+
+$(document).on('turbolinks:load', function() {
+	console.log("Is it loading this?");
+  $(document).foundation();
+});
+
+
