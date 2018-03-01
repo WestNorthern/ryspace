@@ -1,28 +1,31 @@
 @import "foundation_and_overrides";
 @import "home";
 
-
+#rlogo {
+  width: 50px;
+  height: 50px;
+}
 
 // optional demo styles
-  .top-bar {
+.top-bar {
+  background: transparent;
+  position: absolute;
+
+  .menu {
     background: transparent;
-    position: absolute;
-
-    .menu {
-      background: transparent;
-    }
-
-    .menu-text {
-      color: $hero-full-screen-text-color;
-    }
-
-    .menu li {
-      display: flex;
-      align-items: center;
-    }
-
-    .menu a {
-      color: $hero-full-screen-text-color;
-      font-weight: bold;
-    }
   }
+
+  .menu-text {
+    color: $hero-full-screen-text-color;
+  }
+
+  .menu li {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu a {
+    color: $hero-full-screen-text-color;
+    font-weight: bold;
+  }
+}
